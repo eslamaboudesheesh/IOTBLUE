@@ -1,93 +1,90 @@
-import React from 'react'
-import { FETCH_USER_DETAILS_ERROR, FETCH_USER_DETAILS_PENDING, FETCH_USER_DETAILS_SUCCESS, FETCH_USERS_ERROR, FETCH_USERS_PENDING, FETCH_USERS_SUCCESS, LOAD_USER_LIST, ADD_USER_DETAILS_SUCCESS, ADD_USER_DETAILS_ERROR } from "../actions/type"
+import React from "react";
+import {
+  FETCH_USER_DETAILS_ERROR,
+  FETCH_USER_DETAILS_PENDING,
+  FETCH_USER_DETAILS_SUCCESS,
+  FETCH_USERS_ERROR,
+  FETCH_USERS_PENDING,
+  FETCH_USERS_SUCCESS,
+  LOAD_USER_LIST,
+  ADD_USER_DETAILS_SUCCESS,
+  ADD_USER_DETAILS_ERROR,
+} from "../actions/type";
 
-
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 const initialState = {
-    MyUsersList : [],
-    pending: true,
-    error: null
-
-}
+  MyUsersList: [],
+  pending: true,
+  error: null,
+};
 
 const initialUserState = {
-  MyUserDetails :{},
+  MyUserDetails: {},
   pending: true,
-  error: null
-
-}
+  error: null,
+};
 
 const initialAddUserState = {
-   Message:{}
+  Message: {},
+};
 
-}
-
-
-
-const UsersListReducers = (state= initialState , action) => {
-  switch(action.type){
+const UsersListReducers = (state = initialState, action) => {
+  switch (action.type) {
     case FETCH_USERS_PENDING:
-      return{
+      return {
         ...state,
-        pending: true
-      }
+        pending: true,
+      };
     case FETCH_USERS_SUCCESS:
-      return{
+      return {
         ...state,
-        MyUsersList:[action.payload],
-        pending: false
-       
-      }
+        MyUsersList: [action.payload],
+        pending: false,
+      };
     case FETCH_USERS_ERROR:
-      return{
+      return {
         ...state,
         pending: false,
-        error: action.payload
-      }
+        error: action.payload,
+      };
 
     default:
       return state;
   }
+};
 
-}
-
-
-const UserDetailsReducers = (state= initialUserState , action) => {
-  switch(action.type){
+const UserDetailsReducers = (state = initialUserState, action) => {
+  switch (action.type) {
     case FETCH_USER_DETAILS_PENDING:
-      return{
+      return {
         ...state,
-        pending: true
-      }
+        pending: true,
+      };
     case FETCH_USER_DETAILS_SUCCESS:
-      return{
+      return {
         ...state,
-        MyUserDetails:action.payload,
-        pending: false
-       
-      }
+        MyUserDetails: action.payload,
+        pending: false,
+      };
     case FETCH_USER_DETAILS_ERROR:
-      return{
+      return {
         ...state,
         pending: false,
-        error: action.payload
-      }
+        error: action.payload,
+      };
 
     default:
       return state;
   }
+};
 
-}
-
-const AddUserDetailsReducers = (state= initialAddUserState , action) => {
-  switch(action.type){
-   
+const AddUserDetailsReducers = (state = initialAddUserState, action) => {
+  switch (action.type) {
     case ADD_USER_DETAILS_SUCCESS:
-      return{
+      return {
         ...state,
-        Message:action.payload,
-       
-      }
+        Message: action.payload,
+      };
     // case ADD_USER_DETAILS_ERROR:
     //   return{
     //     ...state,
@@ -98,7 +95,9 @@ const AddUserDetailsReducers = (state= initialAddUserState , action) => {
     default:
       return state;
   }
-
-}
-export default  combineReducers ({ UserListStateReducer:UsersListReducers , UserDetails:UserDetailsReducers , AddUserDetails : AddUserDetailsReducers}) 
-
+};
+export default combineReducers({
+  UserListStateReducer: UsersListReducers,
+  UserDetails: UserDetailsReducers,
+  AddUserDetails: AddUserDetailsReducers,
+});

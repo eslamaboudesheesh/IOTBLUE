@@ -18,8 +18,9 @@ export async function AddUserInfo(userData: MyFormValues, resultsCallback: any) 
         },
         body: JSON.stringify({
             "email": userData.email,
-            "firstName":  userData.firstName,
-            "lastName":  userData.lastName    })
-    }).then(response =>  response.json())
+            "firstName": userData.firstName,
+            "lastName": userData.lastName
+        })
+    }).then(response => response.json() )
         .then(result => resultsCallback(result))
 }

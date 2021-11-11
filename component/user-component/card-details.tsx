@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, ReactElement, useEffect, useState } from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import Image from 'next/image'
+import { UserFullViewModel } from '../../types'
 
-function CardDetails({ details }: any) {
+const CardDetails: FC<{ details?: UserFullViewModel }> = ({ details }): ReactElement => {
     const [showLoader, setShowLoader] = useState(true)
     useEffect(() => {
         if (details) {
             setShowLoader(false);
-
         }
 
     }, [details])
     return (
         <>
-            {details.picture ?
+            {details?.picture ?
                 <Card className="card-details col-md-6">
 
                     <Row >

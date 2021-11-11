@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -32,16 +32,16 @@ export default function MainNavbar() {
           className="justify-content-end"
         >
           <Nav className="floot-right">
-          <Link href="/" passHref={true}>
-            <Nav.Link href="/" as="a" eventKey={1}>Home</Nav.Link>
+            <Link href="/" passHref={true}>
+              <Nav.Link href="/" as="a" eventKey={1}>Home</Nav.Link>
             </Link>
             <Link href="/addUser" passHref={true}>
-            <Nav.Link href="/addUser"  as="a" eventKey={2}>AddUser</Nav.Link>
+              <Nav.Link href="/addUser" as="a" eventKey={2}>AddUser</Nav.Link>
             </Link>
-           
+
           </Nav>
 
-       
+
         </Navbar.Collapse>
       </Navbar>
     </>

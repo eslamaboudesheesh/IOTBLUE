@@ -1,23 +1,22 @@
+@import "../component/main-component/styles/mainCard.scss";
+@import "../component/user-component/styles/CardDetails.scss";
+@import "../component/form-component/styles/userForm.scss";
 
-@import '../component/main-component/styles/mainCard.scss';
-@import '../component/user-component/styles/CardDetails.scss';
-@import '../component/form-component/styles/userForm.scss';
+@import "../component/layout/styles/mainNavebar.scss";
+@import "../component/layout/styles/layout.scss";
 
-@import '../component/layout/styles/mainNavebar.scss';
-@import '../component/layout/styles/layout.scss';
-
-@import '../component/layout/styles/footer.scss';
+@import "../component/layout/styles/footer.scss";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: proxima-nova,sans-serif;
+  font-family: proxima-nova, sans-serif;
   min-height: 100%;
   width: 100%;
   color: #333;
   font-size: 14px;
-  font-family: proxima-nova,sans-serif;
+  font-family: proxima-nova, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
@@ -27,7 +26,6 @@ body {
   text-size-adjust: 100%;
   background-color: #fff;
   overflow-x: hidden;
-
 }
 
 a {
@@ -40,14 +38,14 @@ a {
 }
 
 .Sub-title {
-    color: inherit;
-    font-family: playfair display, serif;
-    font-size: 0.7rem;
-    /* font-weight: 100; */
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: none;
-  &::after{
+  color: inherit;
+  font-family: playfair display, serif;
+  font-size: 0.7rem;
+  /* font-weight: 100; */
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  &::after {
     content: "";
     display: block;
     border-bottom: 2px solid #0a7256;
@@ -55,17 +53,17 @@ a {
     position: relative;
     bottom: -6px;
   }
-  }
-  @media (max-width: 992px) {
-    .Sub-title {
-      color: inherit;
-      font-family: playfair display, serif;
-      font-size: 0.7rem;
-      /* font-weight: 100; */
-      line-height: 1;
-      letter-spacing: 0.08em;
-      text-transform: none;
-    &::after{
+}
+@media (max-width: 992px) {
+  .Sub-title {
+    color: inherit;
+    font-family: playfair display, serif;
+    font-size: 0.7rem;
+    /* font-weight: 100; */
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    &::after {
       content: "";
       display: block;
       border-bottom: 2px solid #0a7256;
@@ -73,24 +71,23 @@ a {
       position: relative;
       bottom: -6px;
     }
-    }
   }
+}
 
-  
 .Main__btn {
   font-size: 1.14rem;
   color: #fff;
   background: #0a7256;
   border-color: transparent;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   border: 1px solid transparent;
   margin-top: 1.8rem;
   min-width: 16.4rem;
-  &:hover, &:focus , &:active{
-     
-          background: #0c8968;
-          color: #fff;
-      
+  &:hover,
+  &:focus,
+  &:active {
+    background: #0c8968;
+    color: #fff;
   }
 }
 
@@ -104,5 +101,5 @@ a {
   align-items: center;
   z-index: 999;
   padding-bottom: 48px;
-  top: 41px
+  top: 41px;
 }

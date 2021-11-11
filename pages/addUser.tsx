@@ -14,27 +14,27 @@ import { useEffect, useState } from 'react'
 
 const AddUser: NextPage = () => {
   const [show, setShow] = useState(false)
-  const {Message} = useSelector((state:any) => state.AddUserDetails)
+  const { Message } = useSelector((state: any) => state.AddUserDetails)
   useEffect(() => {
-     if(Message.Message ){
-        setShow(true)
-        setTimeout(() => {
-          setShow(false)
-        }, 6000);
-     }
-     
-   
-  
+    if (Message.Message) {
+      setShow(true)
+      setTimeout(() => {
+        setShow(false)
+      }, 6000);
+    }
+
+
+
   }, [Message.Message])
   return (
     <div className={styles.container}>
-      <AddNewUser/>
+      <AddNewUser />
       <div className='alert-wrapper'>
-        <Row> 
-           <Alert className={`${Message.alertStyle}`} show={show} onClose={() => setShow(false)} dismissible>
-               {Message.Message}
-          </Alert> 
-          </Row> 
+        <Row>
+          <Alert className={`${Message.alertStyle}`} show={show} onClose={() => setShow(false)} dismissible>
+            {Message.Message}
+          </Alert>
+        </Row>
       </div>
     </div>
   )

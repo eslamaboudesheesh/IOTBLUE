@@ -8,10 +8,10 @@ import UserComponent from '../../component/user-component/user-component'
 import { GetUserDetails } from '../../lib/services/user-details'
 import { fetchUserDetailsPending, fetchUSerDetailsSuccess } from '../../redux/actions/UsersAction'
 
-export const getStaticProps: GetStaticProps = async (context:any ) => {
+export const getStaticProps: GetStaticProps = async (context: any) => {
 
   const userId = context.params.alias.pop()
-   const  getUserDetails = await GetUserDetails(userId);
+  const getUserDetails = await GetUserDetails(userId);
   return {
     props: {
       getUserDetails
@@ -20,28 +20,28 @@ export const getStaticProps: GetStaticProps = async (context:any ) => {
 }
 
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   return {
     fallback: true,
     paths: []
   }
 }
 
-const UserDetailsPage:NextPage = ({getUserDetails}:any) => {
-  
+const UserDetailsPage: NextPage = ({ getUserDetails }: any) => {
+
   const dispatch = useDispatch()
   useEffect(() => {
-     dispatch(fetchUserDetailsPending());
-     if(getUserDetails) {
-       dispatch(fetchUSerDetailsSuccess(getUserDetails))
-     }
-  
+    dispatch(fetchUserDetailsPending());
+    if (getUserDetails) {
+      dispatch(fetchUSerDetailsSuccess(getUserDetails))
+    }
+
   }, [dispatch, getUserDetails])
 
   return (
-      <>
-        <UserComponent/>
-      </>
+    <>
+      <UserComponent />
+    </>
   )
 }
 

@@ -6,8 +6,8 @@ export default function Footer() {
       <footer className="container-fluid py-2 footer__wrapper">
 
         <section className="row footer__Section">
-            <p>@ 2021 IotBlue , All Rights Reseved </p>
-          
+          <p>@ 2021 IotBlue , All Rights Reseved </p>
+
         </section>
       </footer>
     </>

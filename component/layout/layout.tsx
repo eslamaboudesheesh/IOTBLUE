@@ -3,22 +3,21 @@ import Footer from './footer';
 import MainNavbar from './MainNavbar';
 
 
-const Layout:FC = props => {
-  
+const Layout: FC = props => {
+
   return (
     <div className="Layout" >
-              <MainNavbar/>
+      <MainNavbar />
+      <div className="content" >
+        {props.children}
+      </div>
+      <Footer />
 
-    <div className="content" >
-      {props.children}
     </div>
-    <Footer/>
-
-  </div>
   )
 }
-   
-   
-  
-  
-  export default Layout;
+
+
+
+
+export default Layout;
