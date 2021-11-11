@@ -1,0 +1,21 @@
+.footer__wrapper {
+    font-family: proxima-nova, sans-serif;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    border-top: 1px solid #9999;
+
+    .footer__Section{
+        padding-top: 15px;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: #333;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        p {
+            text-align: center;
+        }
+      }
+}
