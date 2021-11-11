@@ -1,5 +1,6 @@
 .Header__navbar {
   background-color: white;
+  padding: 10px;
 }
 
 .Header__magical {
@@ -30,7 +31,9 @@
   text-decoration: none;
   text-align: left;
 }
-
+.navbar-nav {
+  padding: 0px 10px 0px 10px;
+}
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   display: block;

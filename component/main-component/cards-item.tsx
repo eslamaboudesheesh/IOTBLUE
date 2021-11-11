@@ -10,7 +10,7 @@ const CardsItem: FC<{ details?: UserPerviewViewModel }> = ({ details }): ReactEl
     return (
         <>
             <Link href={'/user/' + details?.id} passHref={true} >
-                <Card className="user-Cards">
+                <Card className="user-Cards col-sm-12">
                     <Row >
 
                         <Col md={4} >

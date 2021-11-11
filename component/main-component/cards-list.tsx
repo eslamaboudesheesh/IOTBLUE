@@ -15,7 +15,7 @@ function CardsList({ data, total }: ListViewModel) {
                     {data?.map(function (col: UserPerviewViewModel, id: React.Key | null | undefined): any {
                         return (
 
-                            <Col xs={6} md={5} key={id}>
+                            <Col xs={12} md={5} key={id}>
                                 <CardsItem details={col} />
                             </Col>
                         );
